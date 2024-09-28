@@ -4,12 +4,13 @@
 
 
 <div class="login-page">
-  <img src="{% static 'images/login-background.PNG' %}" alt="">
-  <div class="student-signup-form">
+  <img src="{% static 'images/login-background.PNG' %}" style="height: 120vh; background-color: rgb(0,20,121);" alt="math-teacher">
+
+  <div class="student-signup-form" style="background-color: rgb(0,20,121);">
     {% if registered %}
     <h1>Thank you for registering.</h1>
     {% else %}
-    <h1>Sign Up as a teacher.</h1>
+    <h1 >Sign Up as a teacher.</h1>
     
 
     <form method="post">
@@ -31,7 +32,7 @@
       <p> {{ user_form.password1.help_text }} </p>
       <p> <label for="">{{ user_form.password2.label_tag }}</label>{{ user_form.password2 }}</p>
       <p> {{ user_form.password2.help_text }} </p>
-      <input type="submit" name="" value="Sign Up">
+      <input type="submit" name="" value="Sign Up" style="background-color: #385170;">
     </form>
     <a href="{% url 'classroom:login' %}">Already have an account.</a>
     {% endif %}
