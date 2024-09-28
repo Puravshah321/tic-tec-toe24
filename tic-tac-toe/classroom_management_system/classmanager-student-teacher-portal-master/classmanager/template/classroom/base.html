@@ -32,7 +32,10 @@
 
     <nav>
       <div class="toggle">
-        <a href="{% url 'home' %}">ClassRoom Management System</a>
+        <!-- <marquee behavior="left" direction="left"> -->
+          <a href="{% url 'home' %}" style="text-align: center;">Classroom Management System</a>
+       
+        
         <i class="fa fa-bars menu"></i>
       </div>
     </nav>
@@ -45,13 +48,21 @@
           <li> <a href="{% url 'classroom:submit_list' %}">View Submissions</a> </li>
           <li> <a href="{% url 'classroom:students_list' %}">All Students List</a> </li>
           <li> <a href="{% url 'classroom:class_student_list'%}">Class Students List</a> </li>
+         
           <li> <a href="{% url 'classroom:write_notice' %}">Write Notice</a> </li>
           <li> <a href="{% url 'classroom:messages_list' pk=user.pk %}">Inbox</a> </li>
           <li> <a href="{% url 'classroom:teacher_detail' pk=user.pk %}">Profile</a> </li>
+               
+          <!-- New Attendance Generator and Report Links
+          <li><a href="{% url 'classroom:attendance_generator' %}">Attendance Generator</a></li>
+          <li><a href="{% url 'classroom:report' %}">Report</a></li> -->
+
           {% else %}
           <li> <a href="{% url 'classroom:all_marks_list' pk=user.pk %}">Marks</a> </li>
           <li> <a href="{% url 'classroom:class_notice' pk=user.pk %}">Class Notice</a> </li>
           <li> <a href="{% url 'classroom:class_assignment' %}">Class Assignment</a> </li>
+          <li> <a href="{% url 'classroom:class_assignment' %}">Attendance viewer</a> </li>
+
           <li> <a href="{% url 'classroom:teachers_list' %}">Teacher list</a> </li>
           <li> <a href="{% url 'classroom:student_detail' pk=user.pk %}">Profile</a> </li>
           {% endif %}
