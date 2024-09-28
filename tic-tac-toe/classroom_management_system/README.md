@@ -56,14 +56,6 @@ Customizable Classroom Management Tool for Teachers
 
     •	Users can create separate rooms/groups for discussion on a particular topic.
 
-## Documentations:
-
-- [Logbook](https://github.com/parthd06/Python-Classroom_Management_System/blob/main/Extras/reports/Python_Mini_Project_Logbook_Group5.docx)
-
-- [Project Ppt](https://github.com/parthd06/Python-Classroom_Management_System/blob/main/Extras/reports/Python_Mini_Project_Presentation_Group5.pptx)
-
-- [Final Report](https://github.com/parthd06/Python-Classroom_Management_System/blob/main/Extras/reports/Python_Mini_Project_Report_Group5.docx)
-
 ## References:
 
 - https://www.upgrad.com/blog/python­projects­ideas­topics­beginners/ 
