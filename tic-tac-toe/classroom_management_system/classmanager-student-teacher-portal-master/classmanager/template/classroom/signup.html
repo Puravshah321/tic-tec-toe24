@@ -2,14 +2,14 @@
 {% load static %}
 {% block content %}
 
-  <div class="login-page">
-  <img src="{% static 'images/login-background.PNG' %}" alt="">
-    <div class="signup">
+  <div class="login-page" style="background-color: #a7afff;">
+  <img src="{% static 'images/login-front.PNG' %}" alt="">
+    <div class="signup" style="background-color : rgb(16, 45, 186)" >
       <h1>Sign Up</h1>
       <br>
-      <a href="{% url 'classroom:StudentSignUp' %}"><p>I'm a Student</p> </a>
+      <a href="{% url 'classroom:StudentSignUp' %}"><p style="background-color: whitesmoke ; color : rgb(0,20,121)">I'm a Student</p> </a>
       <br>
-      <a href="{% url 'classroom:TeacherSignUp' %}"><p>I'm a Teacher</p> </a>
+      <a href="{% url 'classroom:TeacherSignUp' %}"><p  style="background-color: whitesmoke ; color : rgb(0,20,121)">I'm a Teacher</p> </a>
     </div>
     </div>
 
