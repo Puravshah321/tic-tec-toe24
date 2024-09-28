@@ -5,8 +5,8 @@
 
 
 <div class="login-page">
-  <img src="{% static 'images/login-background.PNG' %}" alt="">
-  <div class="login-form">
+  <img src="{% static 'images/login-front.png' %}" alt="">
+  <div class="login-form" style="background-color:rgb(0,20,121);border-radius: 20px;width: 500px">
     <div class="avatar">
       <img src="{% static 'images/login-avatar.PNG' %}" alt="">
     </div>
@@ -20,20 +20,20 @@
       </button>
     </div>
     {% endif %}
-    <h1>Login</h1>
+    <h1 style="color:whitesmoke">Login</h1>
     <form action="{% url 'classroom:login' %}" method="post">
       {% csrf_token %}
-      <p>Username:</p>
-      <input type="text" name="username" placeholder="Enter your username">
+      <p style="color: whitesmoke;">Username:</p>
+      <input type="text" name="username" style="color: #ececec;" placeholder="Enter your username" style = "color:#ececec">
       <br>
       <br>
-      <p>Password:</p>
-      <input type="password" name="password" placeholder="Enter password">
+      <p style="color: whitesmoke">Password:</p>
+      <input type="password" name="password"style="color:black;" placeholder="Enter password">
       <br>
       <br>
-      <input class="btn btn-primary" type="submit" name="" value="Login">
+      <input class="btn btn-primary" type="submit" name="" value="Login" style="color: #142d4c; background-color: #9fd3c7;">
     </form>
-    <a href="{% url 'classroom:signup' %}">Don't have an account.</a>
+    <a class="abc" href="{% url 'classroom:signup' %}" style="font-size: 19px;"><center>Don't have an account.</center></a>
   </div>
 </div>
 
