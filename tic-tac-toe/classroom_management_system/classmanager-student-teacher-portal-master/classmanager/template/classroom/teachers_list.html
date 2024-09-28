@@ -5,7 +5,7 @@
 <div class="student-list">
 <div class="container">
   <form method='GET' action="{% url 'classroom:teachers_list' %}">
-    <p>Serch Teacher: <input type='search' name='q' placeholder='Search'></p>
+    <p>Search Teacher: <input type='search' name='q' placeholder='Search'></p>
   </form>
   <div class="row">
   {% for teacher in teachers_list %}
