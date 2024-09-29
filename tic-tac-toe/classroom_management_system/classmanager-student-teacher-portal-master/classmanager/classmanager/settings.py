@@ -81,10 +81,15 @@ WSGI_APPLICATION = 'classmanager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',  # Backend for MySQL
+        'NAME': 'defaultdb',          # Database name
+        'USER': 'avnadmin',          # Database user
+        'PASSWORD': 'AVNS_Xz7xypVdCAsEziRERzf',           # Password
+        'HOST': 'mysql-274c7cb8-classroommanagemnentsystem.j.aivencloud.com',                   # Database host (usually localhost)
+        'PORT': '14930',                        # MySQL port (default is 3306)
     }
 }
+
 
 
 # Password validation
@@ -96,6 +101,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 8,  # Set the minimum password length
+        }
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -104,6 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
 
 
 # Internationalization
@@ -128,3 +137,5 @@ STATICFILES_DIRS = [STATIC_DIR,]
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
