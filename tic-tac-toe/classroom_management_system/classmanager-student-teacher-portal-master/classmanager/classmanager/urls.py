@@ -20,6 +20,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('attendance/generated/', views.qr_code_generated, name='qr_code_generated'),
+    path('attendance/view', views.scan_qr_code, name='scan_qr_code'),
+    path('attendance/view/',views.view_attendance, name='view_attendance'),
     path('admin/', admin.site.urls),
     path('',views.HomePage.as_view(),name="home"),
     path('accounts/', include('django.contrib.auth.urls')),
